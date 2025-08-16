@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chisa Grillz - Family Favourite Grill House</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Top Bar -->
+        <div class="top-bar">
+            <div class="container">
+                <div class="top-bar-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>079 931 9173 | 061 499 4911</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Open: 10:00 AM - 10:00 PM</span>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Collection & Delivery Available</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Header -->
+        <div class="main-header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="brand">
+                        <div class="logo">
+                            <img src="data:image/svg+xml,%3Csvg width='64' height='64' viewBox='0 0 64 64' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='64' height='64' rx='12' fill='%23F4B942'/%3E%3Ctext x='32' y='40' font-family='Arial, sans-serif' font-size='24' font-weight='bold' text-anchor='middle' fill='%23000'%3ECG%3C/text%3E%3C/svg%3E" alt="Chisa Grillz Logo">
+                        </div>
+                        <div class="brand-text">
+                            <h1>CHISA Grillz</h1>
+                            <p>Family favourite grill house</p>
+                        </div>
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="desktop-nav">
+                        <a href="#home">Home</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#about">About</a>
+                        <a href="#contact">Contact</a>
+                        <button class="btn btn-secondary">Order Online</button>
+                    </nav>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="mobile-menu-btn" id="mobileMenuBtn">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <nav class="mobile-nav" id="mobileNav">
+                    <a href="#home">Home</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                    <button class="btn btn-secondary">Order Online</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <img src="https://images.unsplash.com/photo-1734774204115-941fb31c25c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwYnVyZ2VyJTIwY2hlZXNlJTIwYmFjb258ZW58MXx8fHwxNzU1MzI2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Delicious grilled burger">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <h2><span class="text-primary">CHISA</span> Grillz</h2>
+                <p>Experience the taste of perfectly grilled perfection. From juicy burgers to tender ribs, we bring you the finest grilled delights that make us your family's favourite grill house.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary btn-lg">Order Now</button>
+                    <button class="btn btn-outline btn-lg">View Menu</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Menu</h2>
+                <p>Discover our mouth-watering selection of grilled specialties, burgers, and sides that have made us the family favourite grill house.</p>
+            </div>
+
+            <!-- Menu Search -->
+            <div class="menu-search">
+                <input type="text" id="menuSearch" placeholder="Search for your favorite meal..." class="search-input">
+                <button class="search-btn" onclick="searchMenu()">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <!-- Category Filters -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-category="all">All</button>
+                <button class="filter-btn" data-category="meals">Meals</button>
+                <button class="filter-btn" data-category="burgers">Burgers</button>
+                <button class="filter-btn" data-category="wraps">Wraps</button>
+                <button class="filter-btn" data-category="deals">Deals</button>
+                <button class="filter-btn" data-category="specials">Specials</button>
+            </div>
+
+            <!-- Menu Items -->
+            <div class="menu-grid">
+                <!-- Meals Section -->
+                <div class="menu-item" data-category="meals">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1734774204115-941fb31c25c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwYnVyZ2VyJTIwY2hlZXNlJTIwYmFjb258ZW58MXx8fHwxNzU1MzI2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Hake Meal">
+                        <span class="popular-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Hake Meal</h3>
+                            <span class="price">R45</span>
+                        </div>
+                        <p>Medium Hake with Roll & Baby chips or Greek Salad</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="meals">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1611354574034-9655b5b72d59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwcmlicyUyMGJhcmJlY3VlfGVufDF8fHx8MTc1NTMyNjU1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Boerewors Roll Meal">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Boerewors Roll Meal</h3>
+                            <span class="price">R30</span>
+                        </div>
+                        <p>Boerewors Roll with Baby chips</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="meals">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1580917109855-6817741b51e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwY2hpY2tlbiUyMHdpbmdzfGVufDF8fHx8MTc1NTMyNjU1Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Hot Dog Meal">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Hot Dog Meal</h3>
+                            <span class="price">R30</span>
+                        </div>
+                        <p>Hot Dog with Baby chips</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Burgers Section -->
+                <div class="menu-item" data-category="burgers">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1734774204115-941fb31c25c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwYnVyZ2VyJTIwY2hlZXNlJTIwYmFjb258ZW58MXx8fHwxNzU1MzI2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Chicken Burger">
+                        <span class="popular-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Chicken Burger</h3>
+                            <span class="price">R45</span>
+                        </div>
+                        <p>& Cheese with Baby chips</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1734774204115-941fb31c25c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwYnVyZ2VyJTIwY2hlZXNlJTIwYmFjb258ZW58MXx8fHwxNzU1MzI2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Chisa Burger">
+                        <span class="popular-badge">Popular</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Chisa Burger</h3>
+                            <span class="price">R50</span>
+                        </div>
+                        <p>& Cheese with Baby chips (Beef/Chicken)</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1734774204115-941fb31c25c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwYnVyZ2VyJTIwY2hlZXNlJTIwYmFjb258ZW58MXx8fHwxNzU1MzI2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Double Chisa Burger">
+                        <span class="special-badge">Special</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Double Chisa Burger + Cheese</h3>
+                            <span class="price">R75</span>
+                        </div>
+                        <p>& Baby chips (Beef/Chicken)</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="burgers">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1734774204115-941fb31c25c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwYnVyZ2VyJTIwY2hlZXNlJTIwYmFjb258ZW58MXx8fHwxNzU1MzI2NTU2fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Triple Tower Burger">
+                        <span class="special-badge">Premium</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Triple Tower Burger</h3>
+                            <span class="price">R100</span>
+                        </div>
+                        <p>3 x Chicken, 3 x Cheese, 3 x Tomato, Lettuce, Cucumber</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Wraps Section -->
+                <div class="menu-item" data-category="wraps">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1671572578870-1fcac451899b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwd3JhcCUyMHNhbmR3aWNofGVufDF8fHx8MTc1NTMyNjU1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Chicken/Beef Wrap">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Chicken/Beef Wrap</h3>
+                            <span class="price">R50</span>
+                        </div>
+                        <p>Egg Gery Mellow with Baby chips</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <div class="menu-item" data-category="wraps">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1671572578870-1fcac451899b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGlja2VuJTIwd3JhcCUyMHNhbmR3aWNofGVufDF8fHx8MTc1NTMyNjU1N3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Pineapple Burger">
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Pineapple Burger</h3>
+                            <span class="price">R60</span>
+                        </div>
+                        <p>with Baby chips</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+
+                <!-- Deals Section -->
+                <div class="menu-item" data-category="deals">
+                    <div class="menu-item-image">
+                        <img src="https://images.unsplash.com/photo-1580917109855-6817741b51e4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxncmlsbGVkJTIwY2hpY2tlbiUyMHdpbmdzfGVufDF8fHx8MTc1NTMyNjU1Nnww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Chicken Deal">
+                        <span class="deal-badge">Deal</span>
+                    </div>
+                    <div class="menu-item-content">
+                        <div class="menu-item-header">
+                            <h3>Chicken Deal</h3>
+                            <span class="price">R45</span>
+                        </div>
+                        <p>with Vin Mellow or Pap & Sauce (baby chips) or Greek Salad</p>
+                        <div class="meal-options">
+                            <label class="checkbox-option">
+                                <input type="checkbox" class="add-drink" data-price="4"> Add My Size Drink +R4
+                            </label>
+                        </div>
+                        <div class="quantity-controls">
+                            <button class="qty-btn minus" onclick="changeQuantity(this, -1)">-</button>
+                            <span class="quantity">1</span>
+                            <button class="qty-btn plus" onclick="changeQuantity(this, 1)">+</button>
+                        </div>
+                        <button class="btn btn-primary" onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Sidebar -->
+    <div id="cartSidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Order</h3>
+            <button class="close-cart" onclick="toggleCart()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <p class="empty-cart">Your cart is empty</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total: R<span id="cartTotal">0</span></strong>
+            </div>
+            <button class="btn btn-primary btn-checkout" onclick="proceedToCheckout()" disabled>
+                Proceed to Checkout
+            </button>
+        </div>
+    </div>
+
+    <!-- Cart Toggle Button -->
+    <button id="cartToggle" class="cart-toggle" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count" id="cartCount">0</span>
+    </button>
+
+    <!-- Specials Section -->
+    <section class="specials-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Special Offers</h2>
+                <p class="specials-validity">SPECIALS VALID UNTIL ??/??/??</p>
+            </div>
+            <div class="specials-grid">
+                <div class="special-card">
+                    <div class="special-content">
+                        <h3>Family Combo Deal</h3>
+                        <p>2 Burgers + 2 Drinks + Family Fries</p>
+                        <div class="special-price">
+                            <span class="old-price">R180</span>
+                            <span class="new-price">R150</span>
+                        </div>
+                        <button class="btn btn-secondary">Order Now</button>
+                    </div>
+                </div>
+                <div class="special-card">
+                    <div class="special-content">
+                        <h3>Student Special</h3>
+                        <p>Any Burger + Drink</p>
+                        <div class="special-price">
+                            <span class="new-price">R45</span>
+                        </div>
+                        <button class="btn btn-secondary">Order Now</button>
+                    </div>
+                </div>
+                <div class="special-card">
+                    <div class="special-content">
+                        <h3>Weekend Braai Special</h3>
+                        <p>Boerewors + Chicken + Sides</p>
+                        <div class="special-price">
+                            <span class="old-price">R120</span>
+                            <span class="new-price">R100</span>
+                        </div>
+                        <button class="btn btn-secondary">Order Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>What Our Customers Say</h2>
+                <div class="rating-summary">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>4.8 out of 5 based on 127 reviews</p>
+                </div>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23F4B942'/%3E%3Ctext x='20' y='26' font-family='Arial, sans-serif' font-size='16' font-weight='bold' text-anchor='middle' fill='%23000'%3EMAR%3C/text%3E%3C/svg%3E" alt="Mazhindu A.R">
+                            <div>
+                                <h4>Mazhindu A.R</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Best burgers in town! The Chisa Burger is absolutely delicious and the delivery is always fast. Highly recommended!"</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23E74C3C'/%3E%3Ctext x='20' y='26' font-family='Arial, sans-serif' font-size='16' font-weight='bold' text-anchor='middle' fill='%23fff'%3EDJ%3C/text%3E%3C/svg%3E" alt="Dlamini J.">
+                            <div>
+                                <h4>Dlamini J.</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Family favourite indeed! We order from Chisa Grillz every weekend. Great quality and portions are generous."</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-header">
+                        <div class="reviewer-info">
+                            <img src="data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23F4B942'/%3E%3Ctext x='20' y='26' font-family='Arial, sans-serif' font-size='16' font-weight='bold' text-anchor='middle' fill='%23000'%3ELT%3C/text%3E%3C/svg%3E" alt="Lethu T.">
+                            <div>
+                                <h4>Lethu T.</h4>
+                                <div class="review-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p>"Love the Triple Tower Burger! Perfect for sharing or when you're really hungry. Great value for money."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Chisa Grillz</h2>
+                    <div class="about-description">
+                        <p>Welcome to <span class="text-primary">Chisa Grillz</span>, your family's favourite grill house. We're passionate about serving the most delicious grilled foods that bring families together around the table.</p>
+                        <p>Our story began with a simple mission: to create exceptional grilled food using the finest ingredients and traditional cooking methods. From our signature burgers to our tender ribs, every dish is prepared with care and attention to detail.</p>
+                        <p>We believe that great food should be accessible to everyone, which is why we offer convenient collection and delivery options to serve our community better. Whether you're dining in or ordering for home, we ensure every meal meets our high standards.</p>
+                        <div class="about-buttons">
+                            <button class="btn btn-primary">Order Now</button>
+                            <button class="btn btn-outline">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1715783936210-0cc97b66de9f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmYXN0JTIwZm9vZCUyMHJlc3RhdXJhbnQlMjBpbnRlcmlvcnxlbnwxfHx8fDE3NTUyODAwNjV8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral" alt="Restaurant interior">
+                </div>
+            </div>
+
+            <!-- Features -->
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3>Family Favourite</h3>
+                    <p>Serving families with love and dedication since our founding</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <h3>Quality Ingredients</h3>
+                    <p>We use only the finest ingredients for exceptional taste</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fresh Daily</h3>
+                    <p>Everything prepared fresh daily with attention to detail</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Community Focused</h3>
+                    <p>Proud to be part of the local community we serve</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to order? Contact us for collection or delivery. We're here to serve you!</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p>079 931 9173</p>
+                    <p>061 499 4911</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Opening Hours</h3>
+                    <p>Monday - Sunday</p>
+                    <p>10:00 AM - 10:00 PM</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Collection</h3>
+                    <p>Available for pickup</p>
+                    <p>Call for directions</p>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Delivery</h3>
+                    <p>Fast delivery service</p>
+                    <p>30-45 minutes</p>
+                </div>
+            </div>
+
+            <!-- CTA Section -->
+            <div class="cta-section">
+                <div class="cta-content">
+                    <h3>Ready to <span class="text-primary">Order</span>?</h3>
+                    <p>Experience the best grilled food in town. Call us now or order online for delivery or collection.</p>
+                    <div class="cta-buttons">
+                        <button class="btn btn-primary btn-lg">Order Now</button>
+                        <button class="btn btn-outline-white btn-lg">Call Now</button>
+                    </div>
+                    <div class="social-links">
+                        <p>Follow us for updates and special offers</p>
+                        <div class="social-buttons">
+                            <a href="#" class="social-link">Facebook</a>
+                            <a href="#" class="social-link">Instagram</a>
+                            <a href="#" class="social-link">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Delivery Zone Section -->
+    <section class="delivery-zone">
+        <div class="container">
+            <div class="delivery-info">
+                <div class="delivery-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span><strong>NKOWANKOWA</strong> (before 18:00)</span>
+                </div>
+                <div class="delivery-item">
+                    <i class="fas fa-motorcycle"></i>
+                    <span>Fast Delivery: R31</span>
+                </div>
+                <div class="delivery-item">
+                    <i class="fas fa-utensils"></i>
+                    <span><strong>LETABA & DAN</strong> Available</span>
+                </div>
+                <div class="delivery-item">
+                    <i class="fas fa-money-bill-wave"></i>
+                    <span>Price: R30</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>CHISA Grillz</h3>
+                    <p>Your family favourite grill house, serving the finest grilled specialties with love and dedication.</p>
+                    <p class="tagline">Family favourite grill house</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <p>079 931 9173</p>
+                                <p>061 499 4911</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <p>Mon - Sun</p>
+                                <p>10:00 AM - 10:00 PM</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>Collection & Delivery Available</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="#">Order Online</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li>Dine In</li>
+                        <li>Takeaway</li>
+                        <li>Home Delivery</li>
+                        <li>Catering</li>
+                        <li>Online Ordering</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Chisa Grillz. All rights reserved.</p>
+                <div class="made-with-love">
+                    <span>Made with</span>
+                    <i class="fas fa-heart"></i>
+                    <span>for our community. By Azhi Co.</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
